@@ -70,11 +70,11 @@ export default function Textform(props) {
         <hr />
         <p>
           {" "}
-          <b>{text.split(/[ ]+/).filter((element)=>{return element.length!==0}).length}</b> --NO OF WORD IN YOUR TEXT{" "}
+          <b>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length}</b> --NO OF WORD IN YOUR TEXT{" "}
           <b>{text.length}</b> --NO OF CARACTER IN YOUR FEEDBACK
         </p>
         <p>
-          <b>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length}</b> minute approximately time
+          <b>{0.008 * text.split(/\s+/).filter((element)=>{return element.length!==0}).length}</b> minute approximately time
           reading text..
         </p>
         <h3>PREVIEW</h3>

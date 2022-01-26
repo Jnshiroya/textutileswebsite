@@ -1,16 +1,9 @@
  
 import {useState} from 'react';
 import './App.css';
-import About from './component/About';
 import Alert from './component/Alert';
 import Navbar from './component/Navbar';
 import Textform from './component/Textform';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  
-} from "react-router-dom";
 
 function App() {
   const [modee,setmode]=useState('dark');
