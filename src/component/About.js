@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react/cjs/react.development";
 
 export default function About(prop) {
-  const [mystyle, setstyle] = useState({
+  const [mystyle] = useState({
     color: prop.mode === "dark" ? "white" : "black",
     backgroundColor: prop.mode === "dark" ? "black" : "white",
     border: "1px solid ",
