@@ -1,10 +1,11 @@
  
 import {useState} from 'react';
 import './App.css';
+import About from './component/About';
 import Alert from './component/Alert';
 import Navbar from './component/Navbar';
 import Textform from './component/Textform';
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   const [modee,setmode]=useState('dark');
   const [alert,setalert]=useState(null);
@@ -32,22 +33,22 @@ function App() {
   }
   return (
     <> 
-    {/* <Router> */}
+    <Router>
 <Navbar  mode={modee} switchmode={switchmode}/>
 <Alert alert={alert} />
 <div className="container">
-{/* <Routes>
+<Routes>
         <Route element={<About mode={modee}/>} path="/about" />
         
         <Route element={<Textform heading="ENTER YOUr  TEXT-FOR COUNT WORD,CHARACTER,COPY TEXT,REMOVE ALL EXTRA SPACE " showalert={showalert} />} path="/" />
-         */}
-         <Textform heading="ENTER YOUr  TEXT-FOR COUNT WORD,CHARACTER,COPY TEXT,REMOVE ALL EXTRA SPACE " showalert={showalert} />
+        
+         {/* <Textform heading="ENTER YOUr  TEXT-FOR COUNT WORD,CHARACTER,COPY TEXT,REMOVE ALL EXTRA SPACE " showalert={showalert} /> */}
 
         
-{/* </Routes> */}
- {/*  */}
+</Routes> 
+ 
 </div>
-{/* </Router> */}
+</Router>
     </>
   );
 }
